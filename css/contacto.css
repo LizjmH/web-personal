@@ -1,0 +1,132 @@
+body {
+    font-family: 'Monocraft','Droid Sans Mono', 'monospace', monospace;
+    padding: 0;
+    background: linear-gradient(to bottom, #B210E1, #DE0404);
+}
+
+header {
+    background-color:  #5D46EF;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Monocraft','Droid Sans Mono', 'monospace', monospace;
+}
+
+nav {
+    background-color: #212529;
+    padding: 10px 0;
+    text-align: center;
+    font-family: 'Monocraft','Droid Sans Mono', 'monospace', monospace;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+nav a:hover {
+    background-color: #000000;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #000000;
+}
+
+h2{
+    text-align: center;
+    color: #fff;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #000000;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Monocraft','Droid Sans Mono', 'monospace', monospace;;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.message {
+    text-align: center;
+    color: #000000;
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #292525;
+    color: rgb(255, 217, 0);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+    border-top: 1px solid #000000;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 10px;
+}
+
+.footer-column h4 {
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+    color: rgb(255, 217, 0);
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    padding-top: 10px;
+}
