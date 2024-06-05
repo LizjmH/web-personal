@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="css/vista_registro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Recetario de Cocina</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="categorias.html">Recetas</a>
+        <a href="sobrenosotros.html">Sobre Nosotros</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="perfilsinregistro.html">Perfil</a>
+    </nav>
+    <div class="container">
+        <h1>Registro de Usuario</h1>
+        <fieldset>
+        <form id="registro" action="index.js" method="POST">
+            <div class="form-group">
+                <label for="nombre_real">Nombre Real</label>
+                <input type="text" id="nombre_real" name="nombre_real" required>
+            </div>
+            <div class="form-group">
+                <label for="nombre_usuario">Nombre de Usuario</label>
+                <input type="text" id="nombre_usuario" name="nombre_usuario" required>
+            </div>
+            <div class="form-group">
+                <label for="pais">País</label>
+                <input type="text" id="pais" name="pais" required>
+            </div>
+            <div class="form-group">
+                <label for="correo">Correo Electrónico</label>
+                <input type="email" id="correo" name="correo" required>
+            </div>
+            <div class="form-group">
+                <label for="contrasena">Contraseña</label>
+                <input type="password" id="contrasena" name="contrasena" required>
+            </div>
+            <button type="submit">Registrarse</button>
+          
+        </form>
+    </fieldset>
+        <script>
+            const form = document.querySelector("#registro")
+		form.addEventListener("submit", async e => {
+			e.preventDefault()
+
+			/** @type {HTMLInputElement} */
+			const nombre = document.querySelector("#nombre_real")
+			/** @type {HTMLInputElement} */
+			const nombreusuario = document.querySelector("#nombre_usuario")
+            /** @type {HTMLInputElement} */
+			const pais = document.querySelector("#pais")
+            /** @type {HTMLInputElement} */
+			const correo = document.querySelector("#correo")
+            /** @type {HTMLInputElement} */
+			const contra = document.querySelector("#contrasena")
+            
+            const respuesta = await fetch("/api/registro", {
+				method: "POST",
+				headers: {
+					"content-type": "application/json"
+				},
+				body: JSON.stringify({
+					nombre: nombre.value,
+					nombreusuario: nombreusuario.value,
+                    pais: pais.value,
+                    correo: correo.value,
+                    contra: contra.value
+				})
+			}).then(r => r.json())
+			console.log(respuesta);
+			alert("usuario registrado")
+		})
+        </script>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4>Enlaces útiles</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="categorias.html">Recetas</a></li>
+                    <li><a href="sobrenosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contacto</h4>
+                <p>Email: info@example.com</p>
+                <p>Teléfono: +1 234 567 890</p>
+            </div>
+            <div class="footer-column">
+                <h4>Acceso</h4>
+                <ul>
+                    <li><a href="iniciarsesion.html">Iniciar Sesión</a></li>
+                    <li><a href="vistaregistro.html">Registrarse</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Recetario de Cocina. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
