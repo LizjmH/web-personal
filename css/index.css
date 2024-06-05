@@ -1,0 +1,123 @@
+body {
+    font-family: 'Monocraft','Droid Sans Mono', 'monospace', monospace;
+    padding: 0;
+    background: linear-gradient(to bottom, #B210E1, #DE0404);
+}
+header {
+    background-color: #5D46EF;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Monocraft','Droid Sans Mono', 'monospace', monospace;
+}
+nav {
+    background-color: #212529;
+    padding: 10px 0;
+    text-align: center;
+    font-family: 'Monocraft','Droid Sans Mono', 'monospace', monospace;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+nav a:hover {
+    background-color: #000000;
+}
+section {
+    display: flex;
+    width: 880px;
+    height: 520px;
+    margin-bottom: 0;
+}
+section img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 1;
+    transition: .5s ease;
+}
+section img:hover{
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+#columna {
+    background-color: #FFAAFF ;
+    padding: 20px;
+    border: 4px solid #FFAAFF ;
+    position: relative;
+    float: right;
+    width: 400px;
+    margin-left: 20px;
+    top: -505px;
+}
+
+#columna blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+#columna blockquote header {
+    margin-bottom: 10px;
+}
+
+#columna blockquote header h3 {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+#columna blockquote p {
+    color: #000000;
+    font-size: 17px;
+    line-height: 1.2;
+    font-family: 'Monocraft','Droid Sans Mono', 'monospace', monospace;
+}
+footer {
+    background-color: #292525;
+    color: rgb(255, 217, 0);
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+    border-top: 1px solid #000000;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 10px;
+}
+
+.footer-column h4 {
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+    color: rgb(255, 217, 0);
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    padding-top: 10px;
+}
